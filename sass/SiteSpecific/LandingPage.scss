@@ -28,9 +28,9 @@
              text-align: center;
              display: block;
              color: white;
-             font-family: "myriad-pro", "helvetica", "san-serif";
-            
+             font-family: "Myriad Pro", Helvetica, sans-serif;
          }
+         
          
      }
 
@@ -42,8 +42,10 @@
 
      >div{
       box-sizing: border-box;
-    //   border: solid 0.5px red;
+      border: solid 0.5px red;
      }
+
+    
 
      #headline-container{
         
@@ -68,6 +70,11 @@
 }
 #sub-headline{
      font-size: 1.9vw;
+     text-align: center;
+     display: block;
+     color: white;
+     font-family: "Myriad Pro", "helvetica", "san-serif";
+     a{color:white;}
 }
 
 
