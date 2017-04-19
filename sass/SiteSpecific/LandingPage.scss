@@ -42,39 +42,58 @@
 
      >div{
       box-sizing: border-box;
-      border: solid 0.5px red;
+    //   border: solid 0.5px red;
      }
-
-    
 
      #headline-container{
-        
-         position: absolute;
-         left: 0;
-         right: 0;
-         top: 0;
-         bottom: 0;
-         margin: auto;
-
-         min-height: 50px;
-         padding: 0 10px;
+            
+            &::before,
+            &::after{
+                content:"";
+                display:inline-block;
+                width:1%;
+                height:100%;
+                vertical-align: middle;
+            }
      }
+
+     #headline-innercontainer{
+
+        //  position: absolute;
+        //  left: 0;
+        //  right: 0;
+        //  top: 0;
+        //  bottom: 0;
+        //  margin: auto;
+
+        //  min-height: 50px;
+        //  padding: 0 10px;
+
+        width: 96%;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+
 
 
 }
 
+
+
 #headline{
-    font-size: 2.5vw;
+    font-size: 3rem;
     // line-height: 5rem;
     padding-bottom: 5px;
 }
 #sub-headline{
-     font-size: 1.9vw;
+     font-size: 2.2rem;
      text-align: center;
      display: block;
      color: white;
      font-family: "Myriad Pro", "helvetica", "san-serif";
      a{color:white;}
+     a+a{text-decoration: none;}
 }
 
 
@@ -85,18 +104,19 @@
         width: 170px;
     }
 
-     #headline-container{
+     #headline-innercontainer{
          margin: 0px;
          margin-top: 5px;
+         width: 95%;
      }
    
      #headline{
-         font-size: 4.5vw ;
-         line-height: 5vw;
+         font-size: 1.2rem ;
+         line-height: 2rem;
      }
      #sub-headline{
-         font-size:3.5vw;
-         line-height: 5vw;
+         font-size:0.9rem;
+         line-height:1.2;
          
      }
 
@@ -105,28 +125,44 @@
 
 @media (min-width: 500px) and (max-width:900px){
 
-     #headline{
-         font-size: 4vw ;
-         line-height: 4.5vw;
+    #headline{
+         font-size: 1.9rem ;
+         line-height: 2.2rem;
      }
      #sub-headline{
-         font-size:2.9vw;
-         line-height:4.5vw;
+         font-size:1.4rem;
+        //  line-height:2rem;
+         
+     }
+
+
+}
+
+@media (min-width: 900px) and (max-width:1200px){
+
+     #headline{
+         font-size: 2.2rem ;
+         line-height: 2.2rem;
+     }
+     #sub-headline{
+         font-size:1.8rem;
+         line-height:2rem;
          
      }
 
 }
 
-@media (min-width: 900px) and (max-width: 1100px)
+
+@media (min-width: 1200px) and (max-width: 1600px)
 {
    
      #headline{
-         font-size: 3.5vw ;
-         line-height: 4vw;
+         font-size: 2.2rem ;
+        //  line-height: 2.5rem;
      }
      #sub-headline{
-         font-size:2.8vw;
-         line-height:3.3vw;
+         font-size:1.6rem;
+         line-height: 2rem;
          
      }
 
