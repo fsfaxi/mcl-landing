@@ -12,15 +12,17 @@
     background-image: url("/Media/Background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position-x: center;
+    background-position-y: center;
+    
 
-    div:nth-child(1){
+    >div:nth-child(1){
 
          height: 57%;
 
      }
 
-    div:nth-child(2){
+    >div:nth-child(2){
 
          height: 19%;
          position: relative;
@@ -34,7 +36,7 @@
          
      }
 
-     div:nth-child(3){
+     >div:nth-child(3){
 
         height: 24%;
 
@@ -59,16 +61,6 @@
 
      #headline-innercontainer{
 
-        //  position: absolute;
-        //  left: 0;
-        //  right: 0;
-        //  top: 0;
-        //  bottom: 0;
-        //  margin: auto;
-
-        //  min-height: 50px;
-        //  padding: 0 10px;
-
         width: 96%;
         display: inline-block;
         vertical-align: middle;
@@ -79,17 +71,13 @@
 
 }
 
-
-
 #headline{
-    font-size: 3rem;
-    // line-height: 5rem;
+    font-size: 4rem;
     padding-bottom: 5px;
 }
 #sub-headline{
-     font-size: 2.2rem;
+     font-size: 3.5rem;
      text-align: center;
-     display: block;
      color: white;
      font-family: "Myriad Pro", "helvetica", "san-serif";
      a{color:white;}
@@ -97,67 +85,72 @@
 }
 
 
-@media  (max-width: 500px)
-{
 
-    #mcl-landing-logo-container{
-        width: 170px;
-    }
+/*
+ * MEDIA QUERIES
+*/
 
-     #headline-innercontainer{
-         margin: 0px;
-         margin-top: 5px;
-         width: 95%;
-     }
-   
+/* x-large screen and smaller */
+@media (min-width: $breakpoint_screen_l) and (max-width: $breakpoint_screen_xl){
+    
      #headline{
-         font-size: 1.2rem ;
+         font-size: 3.2rem ;
+     }
+     #sub-headline{
+         font-size:2.5rem;
          line-height: 2rem;
-     }
-     #sub-headline{
-         font-size:0.9rem;
-         line-height:1.2;
          
      }
-
-
 }
 
-@media (min-width: 500px) and (max-width:900px){
-
-    #headline{
-         font-size: 1.9rem ;
-         line-height: 2.2rem;
+/* large screen only */
+@media (min-width: $breakpoint_screen_xm) and (max-width: $breakpoint_screen_l){
+    
+     #headline{
+         font-size: 2.7rem ;
+        //  line-height: 2.5rem;
      }
      #sub-headline{
-         font-size:1.4rem;
-        //  line-height:2rem;
+         font-size:2.1rem;
+         line-height: 2rem;
          
      }
-
-
 }
-
-@media (min-width: 900px) and (max-width:1200px){
+/* medium screen only */
+@media (min-width: $breakpoint_screen_s) and (max-width: $breakpoint_screen_xm){
 
      #headline{
-         font-size: 2.2rem ;
-         line-height: 2.2rem;
+         font-size: 2.3rem ;
+        //  line-height: 2.5rem;
      }
      #sub-headline{
-         font-size:1.8rem;
-         line-height:2rem;
+         font-size:1.7rem;
+         line-height: 2rem;
          
      }
 
 }
 
+/* small screen only */
+@media (min-width: $breakpoint_tablet_l) and (max-width: $breakpoint_screen_m){
 
-@media (min-width: 1200px) and (max-width: 1600px)
-{
-   
      #headline{
-         font-size: 2.2rem ;
+         font-size: 2.15rem ;
+        //  line-height: 2.5rem;
+     }
+     #sub-headline{
+         font-size:1.7rem;
+         line-height: 2rem;
+         
+     }
+
+}
+
+/*large tablet only*/
+@media (min-width: $breakpoint_tablet_s) and (max-width: $breakpoint_tablet_l){
+
+     #headline{
+         font-size: 2rem ;
         //  line-height: 2.5rem;
      }
      #sub-headline{
@@ -168,3 +161,79 @@
 
 
 }
+
+/* small tablet only */
+@media (min-width: $breakpoint_mobile) and (max-width: $breakpoint_tablet_s){
+
+     #headline{
+         font-size: 1.5rem ;
+        //  line-height: 2.5rem;
+     }
+     #sub-headline{
+         font-size:1.2rem;
+        //  line-height: 2rem;
+         
+     }
+
+}
+/* mobile */
+@media (max-width: $breakpoint_mobile )
+{
+    
+     #headline{
+         font-size: 1.3rem ;
+        //  line-height: 2.5rem;
+     }
+     #sub-headline{
+         font-size:1.1rem;
+        //  line-height: 2rem;
+         
+     }
+
+
+
+
+}
+
+/*
+ * Statistics of screen resolutions for RWD 
+ * From March 2016 To March 2017
+ * src: http://gs.statcounter.com/screen-resolution-stats/desktop/worldwide
+*/
+
+/* Desktop */
+
+/*
+    * 1920*1080  15.4%
+    * 1600*900   5.9%
+    * 1680*1050  2.8%
+    * 1440*900   6.6%
+    * 1366*768   30.45%
+    * 1280*800   5.41%
+    * 1280*1024  5.8%
+    * 1024*768   5.41%
+*/
+
+/*Tablet*/
+
+/* 
+    * 1280*800  6%
+    * 1024*600  2.77%
+    * 800*1280  2.8%
+    * 768*1024  60.58%
+    * 600*1024  5.41%
+    * 601*926
+    * 962*601
+*/
+
+/* Mobile */
+
+/*
+    * 360*640  35.21%
+    * 375*667  8.78%
+    * 320*568  5.63%
+    * 320*534  4.1%
+    * 480*800  4.36%
+    * 414*736
+    * 720*1280 7.22%
+*/

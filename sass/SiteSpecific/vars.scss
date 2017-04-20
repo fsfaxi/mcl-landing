@@ -7,11 +7,15 @@ $min_height:420px;
 $unit: ($max_width - ($spacing*($grid+1)))/$grid;
 
 /* break points */
-$breakpoint_mobile: 440px;
+$breakpoint_mobile: 480px;
 $breakpoint_tablet_s: 600px;
 $breakpoint_tablet_l: 800px;
 $breakpoint_screen_s: 1024px;
 $breakpoint_screen_m: 1280px;
+$breakpoint_screen_xm: 1366px;
+$breakpoint_screen_l: 1600px;
+$breakpoint_screen_xl: 1920px;
+
 
 
 /* colours */
